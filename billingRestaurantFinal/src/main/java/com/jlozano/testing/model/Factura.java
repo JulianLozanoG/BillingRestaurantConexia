@@ -2,9 +2,18 @@ package com.jlozano.testing.model;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="FACTURA")
 public class Factura {
 
-	
+	@Id
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="course_seq")
 	private Integer idFactura;    
 	private Integer idCliente;       
 	private Integer idCamarero;    
